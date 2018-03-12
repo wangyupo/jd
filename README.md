@@ -5,7 +5,9 @@ Vue应用下的单页面实例
 
 ### 打开方式：
 ```
-git clone https://github.com/wangyupo/jd.git \
-npm install\
+git clone https://github.com/wangyupo/jd.git
+npm install
 npm start
 ```
+
+推荐使用cnpm，附[链接](http://npm.taobao.org/)
