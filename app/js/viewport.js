@@ -15,7 +15,7 @@
         // 允许通过自定义name为hotcss的meta头，通过initial-dpr来强制定义页面缩放
         if (hotcssEl) {
             const hotcssCon = hotcssEl.getAttribute("content")
-            if (hotcssCon) {
+;if (hotcssCon) {
                 const initialDprMatch = hotcssCon.match(/initial\-dpr=([\d\.]+)/)
                 if (initialDprMatch) {
                     dpr = parseFloat(initialDprMatch[1])
@@ -44,13 +44,13 @@
 
         let scale = 1 / dpr,
             content = `width=device-width, initial-scale=${scale}, minimum-scale=${scale}, maximum-scale=${scale}, user-scalable=no`
-        if (viewportEl) {
+;if (viewportEl) {
             viewportEl.setAttribute("content", content)
         }
         else {
             viewportEl = document.createElement("meta")
-            viewportEl.setAttribute("name", "viewport")
-            viewportEl.setAttribute("content", content)
+            ;viewportEl.setAttribute("name", "viewport")
+            ;viewportEl.setAttribute("content", content)
             document.head.appendChild(viewportEl)
         }
     })()
@@ -88,7 +88,7 @@
         }
 
         document.documentElement.style.fontSize = `${innerWidth * 20 / 320}px`
-        hotcss.callback && hotcss.callback()
+        ;hotcss.callback && hotcss.callback()
     }
 
     hotcss.mresize()
@@ -96,7 +96,7 @@
 
     window.addEventListener("resize", () => {
         clearTimeout(hotcss.tid)
-        hotcss.tid = setTimeout(hotcss.mresize, 33)
+        ;hotcss.tid = setTimeout(hotcss.mresize, 33)
     }, false)
     // 绑定resize的时候调用
 
